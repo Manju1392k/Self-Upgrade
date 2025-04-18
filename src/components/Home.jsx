@@ -54,7 +54,59 @@ export default function Home() {
       </div>
 
       {/* Div for companies, countries flags. */}
-      
+      <div className="CompaniesCountries w-[100vw] flex justify-around items-center">
+
+        {/* Div for Companies. */}
+        <div className="Companies w-[45vw] flex flex-col items-center">
+          {/* Div for border. */}
+          <div className="border mainbluebackgroundcolor py-1 rounded-full w-full">
+          </div>
+          {/* Div for text. */}
+          <div className="text">
+            <h1 className='Montserrat font-semibold text-xl mt-1 mb-2'>Trusted by leading tech companies</h1>
+          </div>
+          {/* Div for Companies Icons. */}
+          <div className="CompaniesIcons flex items-center">
+            <img src="/Photos/google.png" className='h-[2rem] ml-3' alt="" />
+            <img src="/Photos/meta.png" className='h-[3rem] ml-3' alt="" />
+            <img src="/Photos/microsoft.png" className='h-[3rem] ml-3' alt="" />
+            <img src="/Photos/apple.png" className='h-[3rem] ml-3' alt="" />
+          </div>
+        </div>
+
+        {/* Div for Countries. */}
+        <div className="Countries w-[45vw] flex flex-col items-center">
+          {/* Div for text. */}
+          <div className="text">
+            <h1 className='Montserrat font-semibold text-xl'>Our learners span the globe</h1>
+          </div>
+          {/* Div for Countries Icons. */}
+          <div className="CountriesIcons flex items-center mt-3 mb-3">
+            <img src="/Photos/India.png" className='h-[2rem] ml-3' alt="" />
+            <img src="/Photos/Canada.png" className='h-[2rem] ml-3' alt="" />
+            <img src="/Photos/China.png" className='h-[2rem] ml-3' alt="" />
+            <img src="/Photos/Usa.png" className='h-[2rem] ml-3' alt="" />
+          </div>
+          {/* Div for border. */}
+          <div className="border blacksecondbackgroundcolor py-1 rounded-full w-full">
+          </div>
+        </div>
+
+      </div>
+
+      {/* Div for Students Image & Text. */}
+      <div className="studenttext flex justify-around items-center w-[90vw] mx-auto">
+        {/* Div for Image. */}
+        <div className="Image">
+          <img className='h-[20rem]' src="/Photos/Student Image.png" alt="" />
+        </div>
+        {/* Div for Text. */}
+        <div className="text w-[70vw]">
+          <h1 className='font-semibold Montserrat text-3xl'>Join Over 20k Achievers Your Success Story Starts Here</h1>
+          <h1 className='Lato text-base mt-2'>At Self Upgrade, we've empowered over 20,000 learners to master new skills and land opportunities with leading tech companies. Whether it's workshops or courses, our platform equips you with the tools to excel in your career journey. Become the next success story today</h1>
+        </div>
+      </div>
+
     </>
 
   )
