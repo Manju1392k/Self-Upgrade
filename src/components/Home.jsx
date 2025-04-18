@@ -54,7 +54,7 @@ export default function Home() {
       </div>
 
       {/* Div for companies, countries flags. */}
-      <div className="CompaniesCountries w-[100vw] flex justify-around items-center">
+      <div className="CompaniesCountries w-[95vw] flex justify-around items-center mx-auto">
 
         {/* Div for Companies. */}
         <div className="Companies w-[45vw] flex flex-col items-center">
@@ -105,6 +105,82 @@ export default function Home() {
           <h1 className='font-semibold Montserrat text-3xl'>Join Over 20k Achievers Your Success Story Starts Here</h1>
           <h1 className='Lato text-base mt-2'>At Self Upgrade, we've empowered over 20,000 learners to master new skills and land opportunities with leading tech companies. Whether it's workshops or courses, our platform equips you with the tools to excel in your career journey. Become the next success story today</h1>
         </div>
+      </div>
+
+      {/* Div for Courses. */}
+      <div className="Courses w-[100vw] flex flex-col">
+
+        {/* Div for Heading. */}
+        <div className="heading flex mx-auto">
+          <h1 className='Montserrat text-lg'>Popular Courses, Workshops</h1>
+        </div>
+
+        {/* Div for heading & Icon. */}
+        <div className="headingicon flex justify-between items-center w-[80vw] mx-auto">
+
+          <h1 className='Montserrat font-bold text-2xl'>Enroll Our Best Courses, Workshops</h1>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-circle-fill mainbluecolor" viewBox="0 0 16 16">
+            <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+          </svg>
+        </div>
+
+        {/* Div for Course cards. */}
+        <div className="Coursecards w-[90vw] flex justify-between items-center mx-auto mt-2">
+
+          {/* Div for Quantum Computer Course. */}
+          <div className="Quantumcomputer shadow-sm shadow-black rounded-md">
+
+            {/* Div for image. */}
+            <div className="image">
+              <img className='rounded-t-md h-[12rem]' src="/Photos/Quantum Computer Image.png" alt="" />
+            </div>
+
+            {/* Div for Course Details. */}
+            <div className="coursedetails px-2">
+
+              {/* Course title. */}
+              <h1 className='font-bold Inter text-lg'>Quantum Computing Course</h1>
+
+              {/* Rating. */}
+              <h1><span className="rating mainbluebackgroundcolor text-white px-2 rounded-full mr-1 text-xs">4.8</span>Rating</h1>
+
+              {/* Div for Icons. */}
+              <div className="icons mt-2">
+
+                {/* Div for People Enrolled. */}
+                <div className="peopleenl flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-people-fill mainbluecolor" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                  </svg>
+                  <h1 className='Inter text-xs font-semibold ml-1'>3,098</h1>
+                </div>
+
+                {/* Div for Lessons. */}
+                <div className="peopleenl flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-file-earmark-text-fill mainbluecolor" viewBox="0 0 16 16">
+                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z" />
+                  </svg>
+                  <h1 className='Inter text-xs font-semibold ml-1'>22</h1>
+                </div>
+
+                {/* Div for Price detials. */}
+                <div className="pricedetails mt-1 w-full flex items-center justify-between">
+                  <div className="price">
+                  <h1 className='font-semibold text-sm'>₹999</h1>
+                  </div>
+                  <div className="text">
+                  <h1 className='font-semibold text-sm'>70% off Limited Time</h1>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
 
     </>
