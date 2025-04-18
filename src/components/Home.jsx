@@ -357,6 +357,38 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Div for Specialprogram. */}
+      <div className="specialprogram flex w-[100vw] justify-around items-center mt-5">
+        {/* Div for text. */}
+        <div className="text w-[45vw] text-center">
+          <h1 className='text-base font-semibold Montserrat'><span className='italic'>Exciting News!</span> We’ve reached 20,000 students, and to celebrate, we're hosting a special test top 100 performers will get ANY 1 course for FREE! Register now limited time only! </h1>
+        </div>
+        {/* Div for form. */}
+        <div className="form mainbluebackgroundcolor w-[40vw] py-4 px-5 rounded-md">
+
+          {/* Div for firstName, LastName. */}
+          <div className="firstnamelastname flex justify-between w-full">
+            {/* Div for FirstName. */}
+            <div className="firstname w-full mr-2">
+              <h1 className='text-white font-semibold Montserrat'>First Name</h1>
+              <input type="name" placeholder='First Name' className='w-full px-2 pb-1 rounded-md' />
+            </div>
+            {/* Div for LastName. */}
+            <div className="LastName w-full">
+              <h1 className='text-white font-semibold Montserrat'>Last Name</h1>
+              <input type="name" placeholder='First Name' className='w-full px-2 pb-1 rounded-md' />
+            </div>
+          </div>
+
+          {/* Div for Email. */}
+          <div className="Email w-full mt-1">
+            <h1 className='text-white font-semibold Montserrat'>Email</h1>
+            <input type="name" placeholder='example123@gmail.com' className='w-full px-2 pb-1 rounded-md' />
+          </div>
+
+        </div>
+      </div>
+
     </>
 
   )
