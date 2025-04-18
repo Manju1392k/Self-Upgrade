@@ -108,7 +108,7 @@ export default function Home() {
       </div>
 
       {/* Div for Courses. */}
-      <div className="Courses w-[100vw] flex flex-col">
+      <div className="Courses w-[95vw] flex flex-col mx-auto">
 
         {/* Div for Heading. */}
         <div className="heading flex mx-auto">
@@ -119,30 +119,32 @@ export default function Home() {
         <div className="headingicon flex justify-between items-center w-[80vw] mx-auto">
 
           <h1 className='Montserrat font-bold text-2xl'>Enroll Our Best Courses, Workshops</h1>
-          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-circle-fill mainbluecolor" viewBox="0 0 16 16">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-circle-fill mainbluecolor cursor-pointer" viewBox="0 0 16 16">
             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
           </svg>
         </div>
 
         {/* Div for Course cards. */}
-        <div className="Coursecards w-[90vw] flex justify-between items-center mx-auto mt-2">
+        <div className="Coursecards w-[80vw] flex justify-between items-center mx-auto my-2">
 
           {/* Div for Quantum Computer Course. */}
           <div className="Quantumcomputer shadow-sm shadow-black rounded-md">
 
             {/* Div for image. */}
             <div className="image">
-              <img className='rounded-t-md h-[12rem]' src="/Photos/Quantum Computer Image.png" alt="" />
+              <img className='rounded-t-md h-[13.5rem] mb-4' src="/Photos/Quantum Computer Image.png" alt="" />
             </div>
 
             {/* Div for Course Details. */}
-            <div className="coursedetails px-2">
+            <div className="coursedetails px-4">
 
-              {/* Course title. */}
-              <h1 className='font-bold Inter text-lg'>Quantum Computing Course</h1>
-
-              {/* Rating. */}
-              <h1><span className="rating mainbluebackgroundcolor text-white px-2 rounded-full mr-1 text-xs">4.8</span>Rating</h1>
+              {/* Div for title & rating. */}
+              <div className="titlerating">
+                {/* Course title. */}
+                <h1 className='font-bold Inter text-lg leading-[0.6]'>Quantum Computing Course</h1>
+                {/* Rating. */}
+                <h1><span className="rating mainbluebackgroundcolor text-white px-2 rounded-full mr-1 text-xs leading-[0]">4.8</span>Rating</h1>
+              </div>
 
               {/* Div for Icons. */}
               <div className="icons mt-2">
@@ -164,17 +166,155 @@ export default function Home() {
                 </div>
 
                 {/* Div for Price detials. */}
-                <div className="pricedetails mt-1 w-full flex items-center justify-between">
-                  <div className="price">
-                  <h1 className='font-semibold text-sm'>₹999</h1>
+                <div className="pricedetails mt-1 w-full flex items-center justify-between Inter">
+                  <div className="price flex items-center">
+                    <h1 className='font-semibold text-sm'>₹999</h1>
+                    <h1 className='font-light text-sm ml-1 line-through'>₹2999</h1>
                   </div>
                   <div className="text">
-                  <h1 className='font-semibold text-sm'>70% off Limited Time</h1>
+                    <h1 className='font-semibold text-sm'>70% off Limited Time</h1>
                   </div>
                 </div>
 
+                {/* Div for Buttons. */}
+                <div className="buttons my-2 flex w-full justify-between">
+                  <button className="blacksecondbackgroundcolor py-2 px-4 rounded-sm text-white font-semibold Inter text-xs flex items-center">Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill ml-2" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                  </svg></button>
+                  <button className="mainbluebackgroundcolor py-2 px-4 rounded-sm text-white font-semibold Inter text-xs flex items-center">Add to Cart Button <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3 ml-2" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                  </svg></button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+          
+          {/* Div for Applied AI & ML Course Course. */}
+          <div className="Applied AI & ML Course shadow-sm shadow-black rounded-md">
+
+            {/* Div for image. */}
+            <div className="image">
+              <img className='rounded-t-md h-[13.5rem] mb-4' src="/Photos/AI & ML.png" alt="" />
+            </div>
+
+            {/* Div for Course Details. */}
+            <div className="coursedetails px-4">
+
+              {/* Div for title & rating. */}
+              <div className="titlerating">
+                {/* Course title. */}
+                <h1 className='font-bold Inter text-lg leading-[0.6]'>Applied AI & ML Course</h1>
+                {/* Rating. */}
+                <h1><span className="rating mainbluebackgroundcolor text-white px-2 rounded-full mr-1 text-xs leading-[0]">4.5</span>Rating</h1>
               </div>
 
+              {/* Div for Icons. */}
+              <div className="icons mt-2">
+
+                {/* Div for People Enrolled. */}
+                <div className="peopleenl flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-people-fill mainbluecolor" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                  </svg>
+                  <h1 className='Inter text-xs font-semibold ml-1'>2,785</h1>
+                </div>
+
+                {/* Div for Lessons. */}
+                <div className="peopleenl flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-file-earmark-text-fill mainbluecolor" viewBox="0 0 16 16">
+                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z" />
+                  </svg>
+                  <h1 className='Inter text-xs font-semibold ml-1'>36</h1>
+                </div>
+
+                {/* Div for Price detials. */}
+                <div className="pricedetails mt-1 w-full flex items-center justify-between Inter">
+                  <div className="price flex items-center">
+                    <h1 className='font-semibold text-sm'>₹1999</h1>
+                    <h1 className='font-light text-sm ml-1 line-through'>₹3999</h1>
+                  </div>
+                  <div className="text">
+                    <h1 className='font-semibold text-sm'>50% off Limited Time</h1>
+                  </div>
+                </div>
+
+                {/* Div for Buttons. */}
+                <div className="buttons my-2 flex w-full justify-between">
+                  <button className="blacksecondbackgroundcolor py-2 px-4 rounded-sm text-white font-semibold Inter text-xs flex items-center">Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill ml-2" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                  </svg></button>
+                  <button className="mainbluebackgroundcolor py-2 px-4 rounded-sm text-white font-semibold Inter text-xs flex items-center">Add to Cart Button <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3 ml-2" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                  </svg></button>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          {/* Div for Cyber Security Course Course. */}
+          <div className="Cyber Security Course shadow-sm shadow-black rounded-md">
+
+            {/* Div for image. */}
+            <div className="image">
+              <img className='rounded-t-md h-[13.5rem] mb-4' src="/Photos/Cyber Security.png" alt="" />
+            </div>
+
+            {/* Div for Course Details. */}
+            <div className="coursedetails px-4">
+
+              {/* Div for title & rating. */}
+              <div className="titlerating">
+                {/* Course title. */}
+                <h1 className='font-bold Inter text-lg leading-[0.6]'>Cyber Security Course</h1>
+                {/* Rating. */}
+                <h1><span className="rating mainbluebackgroundcolor text-white px-2 rounded-full mr-1 text-xs leading-[0]">4.2</span>Rating</h1>
+              </div>
+
+              {/* Div for Icons. */}
+              <div className="icons mt-2">
+
+                {/* Div for People Enrolled. */}
+                <div className="peopleenl flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-people-fill mainbluecolor" viewBox="0 0 16 16">
+                    <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                  </svg>
+                  <h1 className='Inter text-xs font-semibold ml-1'>1,226</h1>
+                </div>
+
+                {/* Div for Lessons. */}
+                <div className="peopleenl flex items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" class="bi bi-file-earmark-text-fill mainbluecolor" viewBox="0 0 16 16">
+                    <path d="M9.293 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.707A1 1 0 0 0 13.707 4L10 .293A1 1 0 0 0 9.293 0M9.5 3.5v-2l3 3h-2a1 1 0 0 1-1-1M4.5 9a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM4 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m.5 2.5a.5.5 0 0 1 0-1h4a.5.5 0 0 1 0 1z" />
+                  </svg>
+                  <h1 className='Inter text-xs font-semibold ml-1'>42</h1>
+                </div>
+
+                {/* Div for Price detials. */}
+                <div className="pricedetails mt-1 w-full flex items-center justify-between Inter">
+                  <div className="price flex items-center">
+                    <h1 className='font-semibold text-sm'>₹1599</h1>
+                    <h1 className='font-light text-sm ml-1 line-through'>₹3299</h1>
+                  </div>
+                  <div className="text">
+                    <h1 className='font-semibold text-sm'>50% off Limited Time</h1>
+                  </div>
+                </div>
+
+                {/* Div for Buttons. */}
+                <div className="buttons my-2 flex w-full justify-between">
+                  <button className="blacksecondbackgroundcolor py-2 px-4 rounded-sm text-white font-semibold Inter text-xs flex items-center">Buy Now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill ml-2" viewBox="0 0 16 16">
+                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
+                  </svg></button>
+                  <button className="mainbluebackgroundcolor py-2 px-4 rounded-sm text-white font-semibold Inter text-xs flex items-center">Add to Cart Button <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3 ml-2" viewBox="0 0 16 16">
+                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                  </svg></button>
+                </div>
+
+              </div>
             </div>
 
           </div>
