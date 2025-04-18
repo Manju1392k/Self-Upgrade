@@ -190,7 +190,7 @@ export default function Home() {
             </div>
 
           </div>
-          
+
           {/* Div for Applied AI & ML Course Course. */}
           <div className="Applied AI & ML Course shadow-sm shadow-black rounded-md">
 
@@ -321,6 +321,40 @@ export default function Home() {
 
         </div>
 
+      </div>
+
+      {/* Div for Self Upgrade.*/}
+      <div className="selfupgrade w-full flex flex-col justify-center">
+        <h1 className='Montserrat font-bold text-center text-2xl my-4'>Self Upgrade: The Best Choice for Learning!</h1>
+
+        {/* Div for Features & Main Features. */}
+        <div className="featuresMainfeatures flex justify-center items-stretch">
+
+          {/* Div for Features. */}
+          <div className="Features flex flex-col mr-2">
+            {/* Div for Feature1 */}
+            <div className="feature1 blacksecondbackgroundcolor w-max h-max rounded-lg flex flex-col items-center py-2 px-3">
+              <h1 className='Montserrat font-bold text-white'>Quality</h1>
+              <img src="/Photos/Feature1.png" className='h-[6rem]' alt="" />
+            </div>
+            {/* Div for Feature2 */}
+            <div className="feature2 blacksecondbackgroundcolor w-max h-max rounded-lg flex flex-col items-center py-2 px-3 mt-2">
+              <h1 className='Montserrat font-bold text-white'>Pricing</h1>
+              <img src="/Photos/Feature2.png" className='h-[6rem]' alt="" />
+            </div>
+          </div>
+
+          {/* Div for MainFeatures. */}
+          <div className="mainfeatures mainbluebackgroundcolor rounded-md w-max px-4 py-3  flex flex-col justify-between">
+            <h1 className='Montserrat text-white font-bold text-2xl mb-2 text-center'>Why Learners Trust Us</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Experienced Instructors</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Comprehensive Course Material</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Flexible Learning Schedule</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Interactive Learning Experience</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Strong Community Support</h1>
+          </div>
+
+        </div>
       </div>
 
     </>
