@@ -1,10 +1,52 @@
+/* Importing Google fonts (Inter). */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Importing Google fonts (Montserrat). */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Importing Google fonts (lato). */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 /* Mainblue color. */
-.mainbluecolor{
-  color:#0A21C0
+.mainbluecolor {
+  color: #0A21C0
 }
 
 /* Mainblue background color. */
-.mainbluebackgroundcolor{
+.mainbluebackgroundcolor {
   background-color: #0A21C0;
+}
+
+/* BlackSecond color.*/
+.blacksecondcolor {
+  color: #050A44;
+}
+
+/* BlackSecond backgroundcolor.*/
+.blacksecondbackgroundcolor {
+  background-color: #050A44;
+}
+
+/* Inter. */
+.Inter {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+}
+
+/* Montserrat. */
+.Montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+}
+
+/* Lato. */
+.Lato {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+}
+
+/* Reset default padding & margin. */
+* {
+  margin: 0;
+  padding: 0;
 }
