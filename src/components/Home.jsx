@@ -386,8 +386,27 @@ export default function Home() {
             <input type="name" placeholder='example123@gmail.com' className='w-full px-2 pb-1 rounded-md' />
           </div>
 
+          {/* Div for Phone. */}
+          <div className="Phone w-full mt-1">
+            <h1 className='text-white font-semibold Montserrat'>Phone</h1>
+            <input type="name" placeholder='+91 558866940' className='w-full px-2 pb-1 rounded-md' />
+          </div>
+
+          {/* Div for Current Position. */}
+          <div className="Current Position w-full mt-1">
+            <h1 className='text-white font-semibold Montserrat'>Current Position</h1>
+            <input type="name" placeholder='Student or Software Engineer' className='w-full px-2 pb-1 rounded-md' />
+          </div>
+
+          {/* Div for button.. */}
+          <div className="button">
+            <button className='Register blacksecondbackgroundcolor w-full py-1 rounded-md mt-4 text-white '>Register</button>
+          </div>
+
         </div>
       </div>
+
+      
 
     </>
 
