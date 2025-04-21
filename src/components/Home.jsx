@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       {/* Div for Navbar. */}
-      <div className="navbar flex justify-around items-center py-3 shadow-sm shadow-black">
+      <div className="navbar flex justify-around items-center py-3 shadow-sm shadow-black sm:hidden lg:hidden">
 
         {/* Div for logo. */}
         <div className="logo">
@@ -30,10 +30,10 @@ export default function Home() {
       </div>
 
       {/* Div for Text & Image. */}
-      <div className="textImage flex w-[90vw] h-max mx-auto items-center my-5 justify-between">
+      <div className="textImage flex w-[90vw] h-max mx-auto items-center my-5 justify-between sm:flex-col lg:flex-col sm:items-center lg:items-center">
 
         {/* Div for Text. */}
-        <div className="text w-[50vw]">
+        <div className="text w-[50vw] sm:w-[80vw] lg:w-[80vw] sm:text-center lg:text-center">
           <h1 className='Montserrat text-4xl text-black font-semibold'>Empower Your Mind, Transform Your Future</h1>
           <h1 className='Montserrat mainbluecolor font-bold text-2xl my-2'># Explore, Learn, Achieve Your Growth, Your Way.</h1>
           <h1 className='Lato text-xl'>Welcome to Self Upgrade, the platform where your aspirations take flight. With courses designed by industry experts, we bring you the skills, knowledge, and confidence to thrive in your personal and professional journey. Join us today and unlock your potential</h1>
@@ -48,44 +48,44 @@ export default function Home() {
 
         {/* Div for Image. */}
         <div className="Image">
-          <img src="/Photos/TeachingImg.png" alt="" />
+          <img src="/Photos/TeachingImg.png" alt="" className='sm:flex lg:flex sm:mx-auto lg:mx-auto sm:h-[15rem] lg:h-[15rem] sm:mt-6 lg:mt-6' />
         </div>
 
       </div>
 
       {/* Div for companies, countries flags. */}
-      <div className="CompaniesCountries w-[95vw] flex justify-around items-center mx-auto">
+      <div className="CompaniesCountries w-[95vw] flex justify-around items-center mx-auto sm:flex-col lg:flex-col">
 
         {/* Div for Companies. */}
-        <div className="Companies w-[45vw] flex flex-col items-center">
+        <div className="Companies w-[45vw] flex flex-col items-center sm:w-[90vw] lg:w-[90vw]">
           {/* Div for border. */}
           <div className="border mainbluebackgroundcolor py-1 rounded-full w-full">
           </div>
           {/* Div for text. */}
           <div className="text">
-            <h1 className='Montserrat font-semibold text-xl mt-1 mb-2'>Trusted by leading tech companies</h1>
+            <h1 className='Montserrat font-semibold text-xl mt-1 mb-2 sm:text-center lg:text-center'>Trusted by leading tech companies</h1>
           </div>
           {/* Div for Companies Icons. */}
-          <div className="CompaniesIcons flex items-center">
-            <img src="/Photos/google.png" className='h-[2rem] ml-3' alt="" />
-            <img src="/Photos/meta.png" className='h-[3rem] ml-3' alt="" />
-            <img src="/Photos/microsoft.png" className='h-[3rem] ml-3' alt="" />
-            <img src="/Photos/apple.png" className='h-[3rem] ml-3' alt="" />
+          <div className="CompaniesIcons flex items-center sm:flex-wrap lg:flex-wrap sm:justify-center lg:justify-center">
+            <img src="/Photos/google.png" className='h-[2rem] sm:h-[3rem] lg:h-[3rem] ml-3' alt="" />
+            <img src="/Photos/meta.png" className='h-[3rem] sm:h-[4rem] lg:h-[4rem] ml-3' alt="" />
+            <img src="/Photos/microsoft.png" className='h-[3rem] sm:h-[4rem] lg:h-[4rem] ml-3' alt="" />
+            <img src="/Photos/apple.png" className='h-[3rem] sm:h-[4rem] lg:h-[4rem] ml-3' alt="" />
           </div>
         </div>
 
         {/* Div for Countries. */}
-        <div className="Countries w-[45vw] flex flex-col items-center">
+        <div className="Countries w-[45vw] flex flex-col items-center sm:w-[90vw] lg:w-[90vw]">
           {/* Div for text. */}
           <div className="text">
-            <h1 className='Montserrat font-semibold text-xl'>Our learners span the globe</h1>
+            <h1 className='Montserrat font-semibold text-xl sm:text-center lg:text-center'>Our learners span the globe</h1>
           </div>
           {/* Div for Countries Icons. */}
-          <div className="CountriesIcons flex items-center mt-3 mb-3">
-            <img src="/Photos/India.png" className='h-[2rem] ml-3' alt="" />
-            <img src="/Photos/Canada.png" className='h-[2rem] ml-3' alt="" />
-            <img src="/Photos/China.png" className='h-[2rem] ml-3' alt="" />
-            <img src="/Photos/Usa.png" className='h-[2rem] ml-3' alt="" />
+          <div className="CountriesIcons flex items-center mt-3 mb-3 sm:flex-wrap lg:flex-wrap sm:justify-center lg:justify-center">
+            <img src="/Photos/India.png" className='h-[2rem] sm:h-[3rem] lg:h-[3rem]  my-1 ml-3' alt="" />
+            <img src="/Photos/Canada.png" className='h-[2rem] sm:h-[3rem] lg:h-[3rem]  my-1 ml-3' alt="" />
+            <img src="/Photos/China.png" className='h-[2rem] sm:h-[3rem] lg:h-[3rem]  my-1 ml-3' alt="" />
+            <img src="/Photos/Usa.png" className='h-[2rem] sm:h-[3rem] lg:h-[3rem]  my-1 ml-3' alt="" />
           </div>
           {/* Div for border. */}
           <div className="border blacksecondbackgroundcolor py-1 rounded-full w-full">
@@ -95,7 +95,7 @@ export default function Home() {
       </div>
 
       {/* Div for Students Image & Text. */}
-      <div className="studenttext flex justify-around items-center w-[90vw] mx-auto">
+      <div className="studenttext flex justify-around items-center w-[90vw] mx-auto sm:flex-col lg:flex-col sm:text-center lg:text-center">
         {/* Div for Image. */}
         <div className="Image">
           <img className='h-[20rem]' src="/Photos/Student Image.png" alt="" />
@@ -112,27 +112,27 @@ export default function Home() {
 
         {/* Div for Heading. */}
         <div className="heading flex mx-auto">
-          <h1 className='Montserrat text-lg'>Popular Courses, Workshops</h1>
+          <h1 className='Montserrat text-lg sm:mt-3 lg:mt-3'>Popular Courses, Workshops</h1>
         </div>
 
         {/* Div for heading & Icon. */}
-        <div className="headingicon flex justify-between items-center w-[80vw] mx-auto">
+        <div className="headingicon flex justify-between items-center w-[80vw] mx-auto sm:flex-col lg:flex-col">
 
-          <h1 className='Montserrat font-bold text-2xl'>Enroll Our Best Courses, Workshops</h1>
+          <h1 className='Montserrat font-bold text-2xl sm:text-center lg:text-center'>Enroll Our Best Courses, Workshops</h1>
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right-circle-fill mainbluecolor cursor-pointer" viewBox="0 0 16 16">
             <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z" />
           </svg>
         </div>
 
         {/* Div for Course cards. */}
-        <div className="Coursecards w-[80vw] flex justify-between items-stretch mx-auto my-2">
+        <div className="Coursecards w-[80vw] flex justify-between items-stretch mx-auto my-2 sm:flex-col lg:flex-col sm:w-[90vw] lg:w-[90vw]">
 
           {/* Div for Quantum Computer Course. */}
-          <div className="Quantumcomputer shadow-sm shadow-black rounded-md">
+          <div className="Quantumcomputer shadow-sm shadow-black rounded-md sm:mb-4 lg:mb-4">
 
             {/* Div for image. */}
             <div className="image">
-              <img className='rounded-t-md h-[13.5rem] mb-4' src="/Photos/Quantum Computer Image.png" alt="" />
+              <img className='rounded-t-md h-[13.5rem] mb-4 sm:w-full lg:w-full' src="/Photos/Quantum Computer Image.png" alt="" />
             </div>
 
             {/* Div for Course Details. */}
@@ -192,11 +192,11 @@ export default function Home() {
           </div>
 
           {/* Div for Applied AI & ML Course Course. */}
-          <div className="Applied AI & ML Course shadow-sm shadow-black rounded-md">
+          <div className="Applied AI & ML Course shadow-sm shadow-black rounded-md sm:mb-4 lg:mb-4">
 
             {/* Div for image. */}
             <div className="image">
-              <img className='rounded-t-md h-[13.5rem] mb-4' src="/Photos/AI & ML.png" alt="" />
+              <img className='rounded-t-md h-[13.5rem] mb-4 sm:w-full lg:w-full' src="/Photos/AI & ML.png" alt="" />
             </div>
 
             {/* Div for Course Details. */}
@@ -256,11 +256,11 @@ export default function Home() {
           </div>
 
           {/* Div for Cyber Security Course Course. */}
-          <div className="Cyber Security Course shadow-sm shadow-black rounded-md">
+          <div className="Cyber Security Course shadow-sm shadow-black rounded-md sm:mb-4 lg:mb-4">
 
             {/* Div for image. */}
             <div className="image">
-              <img className='rounded-t-md h-[13.5rem] mb-4' src="/Photos/Cyber Security.png" alt="" />
+              <img className='rounded-t-md h-[13.5rem] mb-4 sm:w-full lg:w-full' src="/Photos/Cyber Security.png" alt="" />
             </div>
 
             {/* Div for Course Details. */}
@@ -324,50 +324,51 @@ export default function Home() {
       </div>
 
       {/* Div for Self Upgrade.*/}
-      <div className="selfupgrade w-full flex flex-col justify-center">
-        <h1 className='Montserrat font-bold text-center text-2xl my-4'>Self Upgrade: The Best Choice for Learning!</h1>
+      <div className="selfupgrade w-full flex flex-col justify-center sm:items-center lg:items-center">
+        <h1 className='Montserrat font-bold text-center text-2xl my-4 sm:text-center lg:text-center'>Self Upgrade: The Best Choice for Learning!</h1>
 
         {/* Div for Features & Main Features. */}
-        <div className="featuresMainfeatures flex justify-center items-stretch">
+        <div className="featuresMainfeatures flex justify-center items-stretch sm:flex-col lg:flex-col">
 
           {/* Div for Features. */}
-          <div className="Features flex flex-col mr-2">
+          <div className="Features flex flex-col mr-2 sm:flex-row lg:flex-row sm:w-full lg:w-full sm:justify-center lg:justify-center sm:items-stretch lg:items-stretch">
             {/* Div for Feature1 */}
             <div className="feature1 blacksecondbackgroundcolor w-max h-max rounded-lg flex flex-col items-center py-2 px-3">
               <h1 className='Montserrat font-bold text-white'>Quality</h1>
               <img src="/Photos/Feature1.png" className='h-[6rem]' alt="" />
             </div>
             {/* Div for Feature2 */}
-            <div className="feature2 blacksecondbackgroundcolor w-max h-max rounded-lg flex flex-col items-center py-2 px-3 mt-2">
+            <div className="feature2 blacksecondbackgroundcolor w-max h-max rounded-lg flex flex-col items-center py-2 px-3 mt-2 sm:mt-0 lg:mt-0 sm:mx-3 lg:mx-3">
               <h1 className='Montserrat font-bold text-white'>Pricing</h1>
               <img src="/Photos/Feature2.png" className='h-[6rem]' alt="" />
             </div>
           </div>
 
           {/* Div for MainFeatures. */}
-          <div className="mainfeatures mainbluebackgroundcolor rounded-md w-max px-4 py-3  flex flex-col justify-between">
+          <div className="mainfeatures mainbluebackgroundcolor rounded-md w-max px-4 py-3  flex flex-col justify-between sm:mt-3 lg:mt-3 sm:w-[80vw] lg:w-[80vw] sm:mx-auto lg:mx-auto">
             <h1 className='Montserrat text-white font-bold text-2xl mb-2 text-center'>Why Learners Trust Us</h1>
-            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Experienced Instructors</h1>
-            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Comprehensive Course Material</h1>
-            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Flexible Learning Schedule</h1>
-            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Interactive Learning Experience</h1>
-            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10'>Strong Community Support</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10 sm:mb-2 lg:mb-2'>Experienced Instructors</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10 sm:mb-2 lg:mb-2'>Comprehensive Course Material</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10 sm:mb-2 lg:mb-2'>Flexible Learning Schedule</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10 sm:mb-2 lg:mb-2'>Interactive Learning Experience</h1>
+            <h1 className='Montserrat bg-white text-black font-medium rounded-sm text-center py-2 px-10 sm:mb-2 lg:mb-2'>Strong Community Support</h1>
           </div>
 
         </div>
       </div>
 
       {/* Div for Specialprogram. */}
-      <div className="specialprogram flex w-[100vw] justify-around items-center mt-5">
+      <div className="specialprogram flex w-[100vw] justify-around items-center mt-5 sm:flex-col lg:flex-col">
         {/* Div for text. */}
-        <div className="text w-[45vw] text-center">
+        <div className="text w-[45vw] text-center sm:w-[95vw] lg:w-[95vw]">
           <h1 className='text-base font-semibold Montserrat'><span className='italic'>Exciting News!</span> We’ve reached 20,000 students, and to celebrate, we're hosting a special test top 100 performers will get ANY 1 course for FREE! Register now limited time only! </h1>
         </div>
+
         {/* Div for form. */}
-        <div className="form mainbluebackgroundcolor w-[40vw] py-4 px-5 rounded-md">
+        <div className="form mainbluebackgroundcolor w-[40vw] py-4 px-5 rounded-md sm:w-[95vw] lg:w-[95vw] sm:mt-4 lg:mt-4">
 
           {/* Div for firstName, LastName. */}
-          <div className="firstnamelastname flex justify-between w-full">
+          <div className="firstnamelastname flex justify-between w-full sm:flex-col lg:flex-col">
             {/* Div for FirstName. */}
             <div className="firstname w-full mr-2">
               <h1 className='text-white font-semibold Montserrat'>First Name</h1>
@@ -407,7 +408,7 @@ export default function Home() {
       </div>
 
       {/* Div for footer. */}
-      <div className="footer blacksecondbackgroundcolor w-full flex justify-around items-center py-5 mt-5">
+      <div className="footer blacksecondbackgroundcolor w-full flex justify-around items-center py-5 mt-5 sm:flex-col lg:flex-col">
 
         {/* Div for followUs. */}
         <div className="followus flex flex-col">
@@ -430,7 +431,7 @@ export default function Home() {
         </div>
 
         {/* Div for Footer Info section. */}
-        <div className="footerinfosection flex justify-around items-top w-[70vw]">
+        <div className="footerinfosection flex justify-around items-top w-[70vw] sm:flex-col lg:flex-col sm:mx-auto lg:mx-auto sm:w-[40vw] lg:w-[40vw] sm:mt-3  lg:mt-3">
           {/* Div for Payment. */}
           <div className="payment">
             <h1 className='text-white font-bold text-base Montserrat mb-2'>Payment</h1>
