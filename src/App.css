@@ -54,3 +54,8 @@ body{
   margin: 0;
   padding: 0;
 }
+
+/* Menubar opening css. */
+.OpenMenubar{
+  display: flex;
+}

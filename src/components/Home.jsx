@@ -1,8 +1,20 @@
-import React from 'react'
-
+import React, { useState } from 'react'
 import '../App.css'
 
 export default function Home() {
+
+  const [Menubar, setMenubar] = useState(false)
+
+  // Function to open Menubar.
+  const OpenMenubar = () => {
+    setMenubar(!Menubar)
+  }
+
+  // Function to close Menubar.
+  const CloseMenubar = () => {
+    setMenubar(false)
+  }
+
   return (
     <>
       {/* Div for Navbar. */}
@@ -28,6 +40,50 @@ export default function Home() {
         </div>
 
       </div>
+
+      {/* Div for Navbar (Responsive design). */}
+      <div className="Navbar-Responsive-design hidden sm:flex lg:flex shadow-sm shadow-black w-full py-3 justify-around items-center">
+
+        {/* Div for logo. */}
+        <div className="logo">
+          <img className='h-[3rem]' src="/Photos/Logo.png" alt="" />
+        </div>
+
+        {/* Div for MenuIcon. */}
+        <div className="MenuIcon" onClick={OpenMenubar}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+          </svg>
+        </div>
+
+      </div>
+
+      {/* Div for Menubar. */}
+      <div className={`Menubar  ${Menubar ? 'OpenMenubar' : 'hidden'} w-full h-max bg-white flex-col fixed top-0`}>
+
+        {/* Div for closeicon. */}
+        <div className="Closeicon w-full flex justify-end" onClick={CloseMenubar}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-circle-fill mx-7 my-2" viewBox="0 0 16 16">
+            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293z" />
+          </svg>
+        </div>
+
+        {/* Div for Links. */}
+        <div className="links flex flex-col items-center">
+          <a href='#' className='mt-2 text-sm'>Courses</a>
+          <a href='#' className='mt-2 text-sm'>Classes</a>
+          <a href='#' className='mt-2 text-sm'>For  Student</a>
+          <a href='#' className='mt-2 text-sm'>For  Educators</a>
+        </div>
+
+        {/* Div for Buttons. */}
+        <div className="buttons flex flex-col items-center">
+          <button className="democlass blacksecondbackgroundcolor py-2 px-4 rounded-md text-white font-semibold Inter mt-2">Demo Class</button>
+          <button className="SignUp mainbluebackgroundcolor py-2 px-4 rounded-md text-white font-semibold Inter my-2">Sign Up</button>
+        </div>
+
+      </div>
+
 
       {/* Div for Text & Image. */}
       <div className="textImage flex w-[90vw] h-max mx-auto items-center my-5 justify-between sm:flex-col lg:flex-col sm:items-center lg:items-center">
