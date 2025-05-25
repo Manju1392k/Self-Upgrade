@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import '../App.css'
 
+import { ToastContainer, toast } from 'react-toastify';
+
 export default function Home() {
 
   const [Menubar, setMenubar] = useState(false)
@@ -15,8 +17,49 @@ export default function Home() {
     setMenubar(false)
   }
 
+  // useState to store formdata.
+  const [Formdata, setFormdata] = useState({
+    FirstName: "",
+    LastName: "",
+    Email: "",
+    Phone: "",
+    CurrentPosition: "",
+  });
+
+  // Function to handle input tags  in a controlled manner.
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormdata({ ...Formdata, [name]: value });
+  };
+
+  // Function to save form data into MongoDB.
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/saveUser", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(Formdata),
+      });
+      // eslint-disable-next-line no-unused-vars
+      const result = await response.json();
+      if (response.ok) {
+        toast.success('Successfully you entered our program.');
+        setFormdata({ FirstName: "", LastName: "", Email: "", Phone: "", CurrentPosition: "" });
+      } else {
+        toast.error("Failed to save data");
+      }
+    } catch (error) {
+      toast.error("Server error", error);
+    }
+  };
+
   return (
     <>
+
+      {/* Toast container for notifications. */}
+      <ToastContainer />
+
       {/* Div for Navbar. */}
       <div className="navbar flex justify-around items-center py-3 shadow-sm shadow-black sm:hidden lg:hidden">
 
@@ -423,42 +466,57 @@ export default function Home() {
         {/* Div for form. */}
         <div className="form mainbluebackgroundcolor w-[40vw] py-4 px-5 rounded-md sm:w-[95vw] lg:w-[95vw] sm:mt-4 lg:mt-4">
 
-          {/* Div for firstName, LastName. */}
-          <div className="firstnamelastname flex justify-between w-full sm:flex-col lg:flex-col">
-            {/* Div for FirstName. */}
-            <div className="firstname w-full mr-2">
-              <h1 className='text-white font-semibold Montserrat'>First Name</h1>
-              <input type="name" placeholder='First Name' className='w-full px-2 pb-1 rounded-md' />
+          {/* Form for saving data in db. */}
+          <form onSubmit={handleSubmit}>
+
+            {/* Div for firstName, LastName. */}
+            <div className="firstnamelastname flex justify-between w-full sm:flex-col lg:flex-col">
+              {/* Div for FirstName. */}
+              <div className="firstname w-full mr-2">
+                <h1 className='text-white font-semibold Montserrat'>First Name</h1>
+                <input type="name" placeholder='First Name' className='w-full px-2 pb-1 rounded-md' name='FirstName'
+                  onChange={handleChange} value={Formdata.FirstName}
+                  required />
+              </div>
+              {/* Div for LastName. */}
+              <div className="LastName w-full">
+                <h1 className='text-white font-semibold Montserrat'>Last Name</h1>
+                <input type="name" placeholder='First Name' className='w-full px-2 pb-1 rounded-md' name='LastName'
+                  onChange={handleChange} value={Formdata.LastName}
+                  required />
+              </div>
             </div>
-            {/* Div for LastName. */}
-            <div className="LastName w-full">
-              <h1 className='text-white font-semibold Montserrat'>Last Name</h1>
-              <input type="name" placeholder='First Name' className='w-full px-2 pb-1 rounded-md' />
+
+            {/* Div for Email. */}
+            <div className="Email w-full mt-1">
+              <h1 className='text-white font-semibold Montserrat'>Email</h1>
+              <input type="name" placeholder='example123@gmail.com' className='w-full px-2 pb-1 rounded-md' name='Email'
+                onChange={handleChange} value={Formdata.Email}
+                required />
             </div>
-          </div>
 
-          {/* Div for Email. */}
-          <div className="Email w-full mt-1">
-            <h1 className='text-white font-semibold Montserrat'>Email</h1>
-            <input type="name" placeholder='example123@gmail.com' className='w-full px-2 pb-1 rounded-md' />
-          </div>
+            {/* Div for Phone. */}
+            <div className="Phone w-full mt-1">
+              <h1 className='text-white font-semibold Montserrat'>Phone</h1>
+              <input type="name" placeholder='+91 558866940' className='w-full px-2 pb-1 rounded-md' name='Phone'
+                onChange={handleChange} value={Formdata.Phone}
+                required />
+            </div>
 
-          {/* Div for Phone. */}
-          <div className="Phone w-full mt-1">
-            <h1 className='text-white font-semibold Montserrat'>Phone</h1>
-            <input type="name" placeholder='+91 558866940' className='w-full px-2 pb-1 rounded-md' />
-          </div>
+            {/* Div for Current Position. */}
+            <div className="Current Position w-full mt-1">
+              <h1 className='text-white font-semibold Montserrat'>Current Position</h1>
+              <input type="name" placeholder='Student or Software Engineer' className='w-full px-2 pb-1 rounded-md' name='CurrentPosition'
+                onChange={handleChange} value={Formdata.CurrentPosition}
+                required />
+            </div>
 
-          {/* Div for Current Position. */}
-          <div className="Current Position w-full mt-1">
-            <h1 className='text-white font-semibold Montserrat'>Current Position</h1>
-            <input type="name" placeholder='Student or Software Engineer' className='w-full px-2 pb-1 rounded-md' />
-          </div>
+            {/* Div for button.*/}
+            <div className="button">
+              <button className='Register blacksecondbackgroundcolor w-full py-1 rounded-md mt-4 text-white '>Register</button>
+            </div>
 
-          {/* Div for button.. */}
-          <div className="button">
-            <button className='Register blacksecondbackgroundcolor w-full py-1 rounded-md mt-4 text-white '>Register</button>
-          </div>
+          </form>
 
         </div>
       </div>
