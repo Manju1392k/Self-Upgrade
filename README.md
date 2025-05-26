@@ -95,7 +95,7 @@ npm install
 * Now In **Windows, open cmd, in Mac, bash Terminal**. Now Hit the below commands.
 
 ```bash
-git clone 
+git clone https://github.com/Manju1392k/Self-Upgrade.git
 ```
 
 * The project was cloned after this process.
