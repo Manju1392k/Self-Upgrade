@@ -25,7 +25,7 @@ https://github.com/user-attachments/assets/6f0b8ec2-e30a-46cb-b5a6-63f29ecceced
 
 # 🎨 Self Upggrade Design in Figma Tool
 
-* Self Upgrade website design is made in Figma Tool (Free Version). Design <a href='https://www.figma.com/design/zwwX8BOJ8yAeizBgOJZw44/Naruto-Uzumaki?node-id=0-1&t=Un9MXiF4iCqtg99v-1'> Link </a>
+* Self Upgrade website design is made in Figma Tool (Free Version). Design <a href='https://www.figma.com/design/VicQvJrjnPlfAI14j1MpPq/Self-Upgrade?node-id=0-1&t=jCY4lU4UtYBnjsy4-1'> Link </a>
 
 <div align='center'>
 
